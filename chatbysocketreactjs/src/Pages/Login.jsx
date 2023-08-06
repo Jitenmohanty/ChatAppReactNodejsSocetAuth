@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { loginRoute } from "../utils/APIRoutes";
+import { loginRoute } from "../utils/APIRouters";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ export default function Login() {
       }
       if (data.status === true) {
         localStorage.setItem(
-          process.env.REACT_APP_LOCALHOST_KEY,
+            process.env.REACT_APP_LOCALHOST_KEY,
           JSON.stringify(data.user)
         );
 
